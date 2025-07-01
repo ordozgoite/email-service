@@ -7,11 +7,15 @@ async function bootstrap() {
     transport: Transport.KAFKA,
     options: {
       client: {
-        clientId: 'email',
+        clientId: 'email-service',
         brokers: ['kafka:29092'],
       },
       consumer: {
         groupId: 'email-consumer',
+        allowAutoTopicCreation: true,
+      },
+      run: {
+        autoCommit: true,
       },
     },
   });

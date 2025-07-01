@@ -3,7 +3,7 @@ import { KafkaConsumer } from './kafka.consumer';
 import { EmailModule } from 'src/email/email.module';
 
 @Module({
-  providers: [KafkaConsumer],
+  controllers: [KafkaConsumer],
   imports: [EmailModule]
 })
 export class KafkaModule {}
